@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="...">
+
+    <meta name="description" content="...">
+    <meta name="keywords" content="...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centro Médico Ñuñoa</title>
+    <!-- CDN BOOTSTRAPS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <div class="container text-center mt-5">
+      <h1 class="mb-4">Registro Consultas</h1>
+      <select id="optionsMedical" class="custom-select">
+	<option id="allList" value="allList">Todos los pacientes</option>
+	<option id="optionRadiologia" value="radiologia">Radiologia</option>
+	<option id="optionTraumatologia" value="traumatologia">Traumatologia</option>
+	<option id="optionDental" value="dental">Dental</option>
+      </select>
+      <button id="optionsBtn" class="btn btn-primary my-3">Consultar</button>
+      <p id="errorDeletePatient" style="color:red;"></p>
+    </div>
+
+    <div id="deleteButtons" class="container text-center bg-light mb-5">
+      <div id="deleteFirst" class="p-3">
+	<label class="mx-3">Eliminar el primer paciente de: </label>
+      	<select id="deleteFirstPatient" class="mx-3">
+      	  <option value="deleteFirstRadio">Radiologia</option>
+      	  <option value="deleteFirstTrauma">Traumatologia</option>
+      	  <option value="deleteFirstDental">Dental</option>
+      	</select>
+      	<button id="deleteFirstBtn" class="btn btn-primary mx-3">Aceptar</button>
+      </div>
+      <div id="deleteLast" class="p-3">
+	<label class="mx-3">Eliminar el ultimo paciente de: </label>
+      	<select id="deleteLastPatient" class="mx-3">
+      	  <option value="deleteLastRadio">Radiologia</option>
+      	  <option value="deleteLastTrauma">Traumatologia</option>
+      	  <option value="deleteLastDental">Dental</option>
+      	</select>
+      	<button id="deleteLastBtn" class="btn btn-primary mx-3">Aceptar</button>
+      </div>
+
+    </div>
+
+    <!-- BUTTONS DESAFIO 2 
+    <div id="addNewPatient" class="container">
+      <label for="">Hora</label>
+      <input type="time" id="iHora" name="" />
+      <label for="">Especialista</label>
+      <input type="text" id="iEspecialisa" name="" />
+      <label for="">Paciente</label>
+      <input type="text" id="iPaciente" name="" />
+      <label for="">RUT</label>
+      <input type="number" id="iRut" name="" placeholder="Ingrese Rut sin guion" />
+      <label for="">Prevision</label>
+      <select id="">
+	<option>FONASA</option>
+	<option>ISAPRE</option>
+      </select>
+
+    </div>
+     BUTTONS DESAFIO 2 -->
+
+    <div class="container text-center mb-5">
+      <h2 id="infoArea" class='mb-3'></h2>
+      <h5 id="firstLastPatient"></h5>
+    </div>
+
+    <div class="container">
+      <div class="row" id="sectionTable">
+	<table class="table">
+	  <thead id="thead">
+	  </thead>
+	  <tbody id="tbody">
+	  </tbody>
+	</table>
+      </div>
+    </div>
+
+    <!-- Por una buena práctica decidí utilizar un archivo JS independiente para el código del desafío 2 alojado en la ruta assets/js/script.js -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
